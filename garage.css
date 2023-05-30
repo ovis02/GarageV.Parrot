@@ -3,7 +3,6 @@
   text-decoration: none;
 }
 .container {
-  width: 1440p
   height: 231px;
   background-image: linear-gradient(to bottom, black, blue);
   margin: auto;
@@ -64,8 +63,38 @@ h2 {
   color: darkgray;
   font-weight: bold;
 }
-#icon-menu {
-  position: absolute;
+@media only screen and (max-width: 880px) {
+  .icon-menu img[src="Image2.png"][alt=""] {
+    display: block;
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: 150px;
+  }
+
+  nav {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .address {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
 }
 
 nav .nav-list {
@@ -92,12 +121,21 @@ nav .nav-list .nav-link {
 }
 
 .banner {
+  height: 30px;
   background-color: #f5f5f5;
   padding: 10px;
-  text-align: center;
+  /*text-align: center;*/
 }
 
-/* Styles pour le texte défilant */
+.icon-menu img[src="Image2.png"] {
+  display: none;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  top: 150px;
+}
+
+/* style pour le texte défilant*/
 .scrolling-text {
   font-size: 20px;
   color: #333333;
@@ -106,7 +144,7 @@ nav .nav-list .nav-link {
   animation: scroll-left 15s linear infinite;
 }
 
-/* Animation pour le défilement du texte */
+/* animation pour le texte défilant */
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
