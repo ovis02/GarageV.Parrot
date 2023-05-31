@@ -2,6 +2,10 @@
   list-style: none;
   text-decoration: none;
 }
+
+body {
+  background-color: lightgrey;
+}
 .container {
   height: 231px;
   background-image: linear-gradient(to bottom, black, blue);
@@ -124,6 +128,7 @@ nav .nav-list .nav-link {
   height: 30px;
   background-color: #f5f5f5;
   padding: 10px;
+  width: auto;
   /*text-align: center;*/
 }
 
@@ -152,4 +157,134 @@ nav .nav-list .nav-link {
   100% {
     transform: translateX(-100%);
   }
+}
+
+/*slider*/
+
+.slide img {
+  width: 1000px;
+  height: 400px;
+}
+
+.slider {
+  width: 1000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slides {
+  width: calc(1000px * 4);
+  animation: glisse 10s infinite;
+}
+
+.slide {
+  float: left;
+}
+
+@keyframes glisse {
+  0% {
+    transform: translateX(0);
+  }
+  12.5% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1000px);
+  }
+  37.5% {
+    transform: translateX(-1000px);
+  }
+  50% {
+    transform: translateX(-2000px);
+  }
+  62.5% {
+    transform: translateX(-2000px);
+  }
+  75% {
+    transform: translateX(-3000px);
+  }
+  87.5% {
+    transform: translateX(-3000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.titre {
+  font-size: 20px;
+  text-align: center;
+  color: darkblue;
+  margin-top: 0;
+}
+
+.section1 {
+  width: 100%;
+  padding: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.img1 {
+  height: 400px;
+  width: 100 px;
+  float: left;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+
+.section2 {
+  float: right;
+  width: 100%;
+}
+.img2 {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+
+.section3 {
+  float: left;
+  width: 100%;
+}
+
+.img3 {
+  float: left;
+  height: 400px;
+  width: 400px;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+.section4 {
+  float: right;
+  width: 100%;
+}
+
+.img4 {
+  height: 400px;
+  width: 400px;
+  float: right;
+  border: 10px solid darkblue;
+  margin: 30px;
+}
+
+.logo2 {
+}
+
+.contact-box {
+  text-align: center;
+  background-color: darkblue;
+  padding: 20px;
+}
+
+.contact-box p {
+  margin-bottom: 10px;
+}
+
+.contact-box a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
 }
