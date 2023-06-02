@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: lightgrey;
+  background: linear-gradient(to left, darkgrey, lightgrey);
 }
 .container {
   height: 231px;
@@ -76,8 +76,24 @@ h2 {
     top: 150px;
   }
 
-  nav {
-    visibility: hidden;
+  .navigation {
+    display: none;
+  }
+  /*affichage de la barre nav en format smartphone*/
+  .navigation.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: darkblue;
+    width: 100%;
+    top: 220px;
+    left: 0;
+    transform: translateY(-21%); /* Le -21% correspond au haut de la page */
+    transition: 2s;
+  }
+
+  .navigation .nav-list .nav-item {
+    padding-left: 35px;
   }
 }
 
@@ -101,24 +117,24 @@ h2 {
   }
 }
 
-nav .nav-list {
+.navigation .nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-nav .nav-list .nav-item {
+.navigation .nav-list .nav-item {
   cursor: pointer;
   height: 100%;
   padding: 0 30px;
   transition: 0.4s;
 }
-nav .nav-list .nav-item:hover {
+.navigation .nav-list .nav-item:hover {
   background: #ff0000;
   border-radius: 10px;
 }
 
-nav .nav-list .nav-link {
+.navigation .nav-list .nav-link {
   color: silver;
   font-size: 18px;
   font-weight: 500;
@@ -143,7 +159,7 @@ nav .nav-list .nav-link {
 /* style pour le texte défilant*/
 .scrolling-text {
   font-size: 20px;
-  color: #333333;
+  color: darkblue;
   white-space: nowrap;
   overflow: hidden;
   animation: scroll-left 15s linear infinite;
@@ -227,7 +243,7 @@ nav .nav-list .nav-link {
 
 .img1 {
   height: 400px;
-  width: 100 px;
+  width: 400 px;
   float: left;
   border: 10px solid darkblue;
   margin: 30px;
@@ -236,6 +252,7 @@ nav .nav-list .nav-link {
 .section2 {
   float: right;
   width: 100%;
+  font-weight: bold;
 }
 .img2 {
   height: 400px;
@@ -248,6 +265,7 @@ nav .nav-list .nav-link {
 .section3 {
   float: left;
   width: 100%;
+  font-weight: bold;
 }
 
 .img3 {
@@ -260,8 +278,19 @@ nav .nav-list .nav-link {
 .section4 {
   float: right;
   width: 100%;
+  font-weight: bold;
 }
-
+.section2 a:hover,
+.section3 a:hover,
+.section4 a:hover {
+  background-color: red;
+}
+.section1 p,
+.section2 p,
+.section3 p,
+.section4 p {
+  color: darkblue;
+}
 .img4 {
   height: 400px;
   width: 400px;
@@ -270,21 +299,107 @@ nav .nav-list .nav-link {
   margin: 30px;
 }
 
-.logo2 {
-}
-
 .contact-box {
   text-align: center;
-  background-color: darkblue;
-  padding: 20px;
 }
 
 .contact-box p {
   margin-bottom: 10px;
+  font-weight: bold;
+  color: darkblue;
 }
 
 .contact-box a {
   text-decoration: none;
   color: red;
   font-weight: bold;
+}
+
+/*logo centre*/
+.logo2 {
+  width: 100%;
+  height: 80%VH;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo3 img {
+  width: 450px;
+  height: 150px;
+}
+
+.titre-logo {
+  color: darkblue;
+  font-size: 50px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+/*map*/
+.section5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.section5 a {
+  color: darkblue;
+}
+.section5 a:hover {
+  background-color: red;
+}
+
+iframe {
+  border: 10px solid darkblue;
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+}
+
+table {
+  border-collapse: collapse;
+}
+caption {
+  font-weight: bold;
+  color: darkblue;
+}
+
+table,
+th,
+td {
+  border: 2px solid darkblue;
+  background-color: lightskyblue;
+}
+
+.divers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.adresse {
+  color: darkblue;
+}
+
+.adresse a {
+  color: darkblue;
+}
+.adresse a:hover {
+  background-color: orange;
+}
+
+.facebook-link,
+.instagram-link,
+.google-link {
+  color: darkblue;
+  padding: 5px;
+}
+.fa-facebook,
+.fa-square-instagram,
+.fa-google {
+  color: darkblue;
 }
