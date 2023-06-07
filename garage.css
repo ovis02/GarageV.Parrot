@@ -82,18 +82,23 @@ h2 {
   /*affichage de la barre nav en format smartphone*/
   .navigation.show {
     display: flex;
-    flex-direction: column;
     position: absolute;
     background: darkblue;
     width: 100%;
-    top: 220px;
-    left: 0;
-    transform: translateY(-21%); /* Le -21% correspond au haut de la page */
-    transition: 2s;
+    top: 200px;
+    z-index: 1;
+  }
+
+  .navigation .nav-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: silver;
+    padding: 20px;
   }
 
   .navigation .nav-list .nav-item {
-    padding-left: 35px;
+    padding-left: 30px;
   }
 }
 
